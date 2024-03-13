@@ -36,54 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-<script>
-        function validateForm() {
-            // Regex pour valider les champs
-            let nomPrenomRegex = /^[a-zA-Z\s'-]+$/;
-            let adresseRegex = /^[a-zA-Z0-9\s,'/-]+$/;
-            let cantonRegex = /^[a-zA-Z\s'-]+$/;
-            let assuranceRegex = /^[a-zA-Z0-9\s'-]+$/;
 
-            // Récupération des valeurs des champs
-            let nom = document.getElementById("nom").value;
-            let prenom = document.getElementById("prenom").value;
-            let dateNaissance = document.getElementById("date_naiss").value;
-            let adresse = document.getElementById("adresse").value;
-            let canton = document.getElementById("canton").value;
-            let assurance = document.getElementById("assurance").value;
-            let assureDepuis = document.getElementById("assure_depuis").value;
-
-            // Validation des champs
-           
-            if (!nomPrenomRegex.test(nom)) {
-                alert("Le nom doit contenir uniquement des lettres, des espaces et des traits d'union.");
-                return false;
-            }
-
-            if (!nomPrenomRegex.test(prenom)) {
-                alert("Le prénom doit contenir uniquement des lettres, des espaces et des traits d'union.");
-                return false;
-            }
-
-            if (!adresseRegex.test(adresse)) {
-                alert("L'adresse doit contenir uniquement des lettres, des chiffres, des espaces, des virgules, des traits d'union et des slashs.");
-                return false;
-            }
-
-            if (!cantonRegex.test(canton)) {
-                alert("Le canton doit contenir uniquement des lettres, des espaces et des traits d'union.");
-                return false;
-            }
-
-            if (!assuranceRegex.test(assurance)) {
-                alert("L'assurance doit contenir uniquement des lettres, des chiffres, des espaces et des traits d'union.");
-                return false;
-            }
-
-            // Si toutes les validations sont réussies, on soumet le formulaire
-            return true;
-        }
-    </script>
 <!DOCTYPE html>
 <html>
 <head>
